@@ -21,6 +21,7 @@ import { Link } from 'react-router-dom'
 
 // Import assets
 import logo from '../assets/JustLogo.png'
+import appleLogo from '../assets/appleLogo.png'
 import screenshot1 from '../assets/IMG_6449.jpg'
 import screenshot2 from '../assets/IMG_6453.jpg'
 import screenshot3 from '../assets/IMG_6455.jpg'
@@ -68,16 +69,17 @@ export default function HomePage() {
                 We don't analyze entire movies or shows - we focus on individual <span className="text-red-600 font-semibold">scenes</span> that matter to you.
               </p>
               
-              {/* Download Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button className="download-btn flex items-center gap-3 text-lg px-8 py-4">
-                  <Apple className="w-6 h-6" />
+              {/* Download Button */}
+              <div className="flex justify-start mb-8">
+                <a 
+                  href="https://apps.apple.com/us/app/sceneit-ai/id6748627258?platform=iphone" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="download-btn flex items-center justify-center gap-3 text-lg px-8 py-4 min-w-[200px]"
+                >
+                  <img src={appleLogo} alt="Apple Logo" className="w-6 h-6" />
                   App Store
-                </Button>
-                <Button className="download-btn flex items-center gap-3 text-lg px-8 py-4">
-                  <Smartphone className="w-6 h-6" />
-                  Google Play
-                </Button>
+                </a>
               </div>
             </div>
             
